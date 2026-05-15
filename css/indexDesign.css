@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        180deg,
+        #E7E8E2,
+        #FBFCF8
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#caixa{
+    width: 70vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#caixa p{
+    font-size: 2em;
+    margin: 20px;
+}
+
+#caixaLogin{
+    width: 40%;
+    margin: 2%;
+    height: 50%;
+    justify-items: center;
+    align-content: center;
+    border: solid 2px black;
+    background-color: #FAFAFA;
+    border-radius: 25px;
+}
+
+#loginButton{
+    width: 250px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: #008000;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#loginButton:hover{
+    background-color: #228022;
+    cursor: pointer;
+    transform: translate(0,-5%);
+}
+
+#caixaCadastro{
+    width: 40%;
+    margin: 2%;
+    height: 50%;
+    justify-items: center;
+    align-content: center;
+    border: solid 2px black;
+    background-color: #FAFAFA;
+    border-radius: 25px;
+}
+
+#cadastroButton{
+    width: 250px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: #FF0A0A;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#cadastroButton:hover{
+    background-color: #FF2222;
+    cursor: pointer;
+    transform: translate(0,-5%);
+}
