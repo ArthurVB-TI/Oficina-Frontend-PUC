@@ -3,86 +3,172 @@
 }
 
 body{
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(
-        180deg,
-        #E7E8E2,
-        #FBFCF8
-    );
+    background-color: #F5FEFD;
+}
+
+main{
+    margin-left: 20vw;
+    padding: 2%;
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Flex{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#caixa{
-    width: 70vw;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#black_bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    opacity: 0;
+    background-color: rgba(0,0,0);
+    transition: all 0.5s ease-in-out;
 }
 
-#caixa p{
+
+
+/* Create Box */
+
+#createBox{
+    width: 40vw;
+    height: 35vh;
+    border-radius: 25px;
+    background-color: #FBFBF9;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: -50%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+#createBox div{
+    width: 90%;
+}
+
+#cb_name{
+    margin-top: 5%;
+    width: 80%;
+    height: 70px;
+    text-align: start;
+}
+
+#cb_name p{
     font-size: 2em;
-    margin: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
-#caixaLogin{
-    width: 40%;
-    margin: 2%;
-    height: 50%;
-    justify-items: center;
-    align-content: center;
-    border: solid 2px black;
-    background-color: #FAFAFA;
-    border-radius: 25px;
-}
-
-#loginButton{
-    width: 250px;
-    height: 70px;
+#cb_name input{
+    width: calc(100% - 15px - 10px);
+    font-size: 1.5em;
+    height: 100%;
     border-radius: 20px;
-    background-color: #008000;
+    padding-right: 15px;
+    padding-left: 10px;
+    background-color: white;
+    border: gray solid 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.cd_button{
+    width: 40%;
+    margin: 5%;
+    align-content: center;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 15px;
+    padding: 10px 0;
+    transition: all 0.1s ease-in-out;
+}
+
+.cd_button:hover{
     cursor: pointer;
+}
+
+#cb_cancel{
+    background-color: red;
+}
+
+#cb_cancel:hover{
+    background-color: darkred;
+}
+
+#cb_submit{
+    background-color: green;
+}
+
+#cb_submit:hover{
+    background-color: darkgreen;
+}
+
+/* Fim create box */
+
+
+
+#newList{
+    width: 90%;
+    height: 75px;
+    border-radius: 20px;
+    color: white;
+    font-size: 2em;
     text-align: center;
+    vertical-align: middle;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5%;
+    background-color: #269c1f;
     transition: all 0.3s ease-in-out;
+    font-weight: bold;
 }
 
-#loginButton:hover{
-    background-color: #228022;
+#newList:hover{
     cursor: pointer;
-    transform: translate(0,-5%);
+    height: 85px;
+    transform: translate(0,0);
+    width: 92%;
+    margin: calc(5% - 5px) 4%;
+    background-color: #048002;
 }
 
-#caixaCadastro{
-    width: 40%;
-    margin: 2%;
-    height: 50%;
-    justify-items: center;
-    align-content: center;
-    border: solid 2px black;
-    background-color: #FAFAFA;
-    border-radius: 25px;
-}
-
-#cadastroButton{
-    width: 250px;
-    height: 70px;
+#undoList{
+    width: 90%;
+    height: 75px;
     border-radius: 20px;
-    background-color: #FF0A0A;
+    color: white;
+    font-size: 2em;
     text-align: center;
+    vertical-align: middle;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    margin: 5%;
+    background-color: #FFB703;
     transition: all 0.3s ease-in-out;
+    font-weight: bold;
 }
 
-#cadastroButton:hover{
-    background-color: #FF2222;
+#undoList:hover{
     cursor: pointer;
-    transform: translate(0,-5%);
+    height: 85px;
+    transform: translate(0,0);
+    width: 92%;
+    margin: calc(5% - 5px) 4%;
+    background-color: #FB8500;
 }

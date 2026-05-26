@@ -4,18 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/indexDesign.css">
-    <title>Document</title>
+
+    <!-- css dos Componentes -->
+    <link rel="stylesheet" href="css/menu.css">
+
+    <title>CRUD</title>
 </head>
 <body>
-    <div id="caixa">
-        <div id="caixaCadastro">
-            <p>Faça o seu Cadastro!</p>
-            <div id="cadastroButton">Cadastro</div>
-        </div>
-        <div id="caixaLogin">
-            <p>Entre aqui!</p>
-            <div id="loginButton">Login</div>
+
+    <!-- Componentes -->
+    <div id="menu">
+        <div>Sistema CRUD</div>
+        <div></div>
+        <p class="menuLinks">Itens</p>
+        <p class="menuLinks">Lista</p>
+        <p class="menuLinks">Dados</p>
+    </div>
+
+
+    <!-- Page -->
+    <div id="black_bg"></div>
+    <div id="createBox">
+        <form id="cb_name">
+            <p>Digite o nome da sua nova Lista: </p>
+            <input type="text" placeholder="Digite aqui!">
+        </form>
+        <div class="Flex">
+            <div class="cd_button" id="cb_submit">Create</div>
+            <div class="cd_button" id="cb_cancel" onclick="close_listBox()">Cancel</div>
         </div>
     </div>
+
+
+    <main>
+        <div id="newList" onclick="criar_listBox()">
+            Criar nova Lista
+        </div>
+        <div id="undoList">
+            Recuperar Lista
+        </div>
+        <div id="itenCreated"></div>
+    </main>
+
+    <script src="javascript/indexScript.js"></script>
 </body>
 </html>

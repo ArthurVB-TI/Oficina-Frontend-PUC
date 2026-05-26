@@ -1,0 +1,47 @@
+#menu{
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    transform: translate(-25px,-50%);
+    background: linear-gradient(
+        180deg,
+        #7B2FF7,
+        rgb(130, 20, 175)
+    );
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr 1fr 1fr 3fr;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#menu p{
+    margin-left: 40px;
+    width: 80%;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 50px;
+    align-content: center;
+    background-color: rgb(115, 15, 165);
+    transition: all 0.2s ease-in-out;
+}
+
+#menu p:hover{
+    cursor: pointer;
+    padding-right: 5%;
+    background-color: rgb(110, 10, 155);
+}
+
+#menu div{
+    margin-top: 50px;
+    font-size: 1.5em;
+    margin-left: calc(5% + 25px);
+}
