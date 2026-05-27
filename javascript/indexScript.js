@@ -23,6 +23,16 @@ class list{
             creat_list_box.style.top = "-50%";
         }
     }
+    active_recuperarListBox(acite){
+        var recuperar_list_box = document.getElementById("recuperarBox");
+        if(acite){
+            recuperar_list_box.style.opacity = "1";
+            recuperar_list_box.style.top = "50%";
+        } else {
+            recuperar_list_box.style.opacity = "0";
+            recuperar_list_box.style.top = "-50%";
+        }
+    }
 }
 
 function criar_listBox(){
@@ -35,4 +45,16 @@ function close_listBox(){
     const list_box = new list();
     active_black_bg(false);
     list_box.active_creatListBox(false);
+}
+
+function criar_recuperar_listBox(){
+    const list_box = new list();
+    active_black_bg(true);
+    list_box.active_recuperarListBox(true);
+}
+
+function close_recuperar_listBox(){
+    const list_box = new list();
+    active_black_bg(false);
+    list_box.active_recuperarListBox(false);
 }

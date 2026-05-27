@@ -34,13 +34,20 @@
             <div class="cd_button" id="cb_cancel" onclick="close_listBox()">Cancel</div>
         </div>
     </div>
+    <div id="recuperarBox">
+        <div id="undoItems"></div>
+        <div class="Flex">
+            <div class="cd_button" id="rb_submit"></div>
+            <div class="cd_button" id="rb_cancel" onclick="close_recuperar_listBox()">Cancel</div>
+        </div>
+    </div>
 
 
     <main>
         <div id="newList" onclick="criar_listBox()">
             Criar nova Lista
         </div>
-        <div id="undoList">
+        <div id="undoList" onclick="criar_recuperar_listBox()">
             Recuperar Lista
         </div>
         <div id="itenCreated"></div>

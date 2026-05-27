@@ -119,6 +119,44 @@ main{
 
 /* Fim create box */
 
+/* Recuperar Box */
+
+#recuperarBox{
+    width: 40vw;
+    height: 45vh;
+    border-radius: 25px;
+    background-color: #FBFBF9;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: -50%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+#rb_cancel{
+    background-color: red;
+}
+
+#rb_cancel:hover{
+    background-color: darkred;
+}
+
+#rb_submit{
+    background-color: green;
+}
+
+#rb_submit:hover{
+    background-color: darkgreen;
+}
+
 
 
 #newList{
