@@ -1,0 +1,120 @@
+* { margin: 0; }
+
+body { background-color: #F5FEFD; }
+
+main {
+    margin-left: 20vw;
+    padding: 2%;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.Flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#black_bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    opacity: 0;
+    background-color: rgba(0,0,0);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Modal */
+.modal {
+    width: 40vw;
+    border-radius: 25px;
+    background-color: #FBFBF9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+    gap: 20px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: -50%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+.modal h2 {
+    font-size: 1.8em;
+    font-weight: 400;
+    width: 80%;
+}
+
+.modal input {
+    width: calc(80% - 25px);
+    font-size: 1.3em;
+    height: 50px;
+    border-radius: 20px;
+    padding: 0 15px 0 10px;
+    background-color: white;
+    border: gray solid 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+}
+
+.cd_button {
+    width: 40%;
+    align-content: center;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 15px;
+    padding: 10px 0;
+    text-align: center;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-green  { background-color: green; }
+.btn-green:hover { background-color: darkgreen; }
+.btn-red    { background-color: red; }
+.btn-red:hover { background-color: darkred; }
+
+/* Hero button */
+#newList {
+    width: 60%;
+    height: 80px;
+    border-radius: 20px;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #269c1f;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#newList:hover {
+    background-color: #048002;
+    width: 63%;
+    height: 88px;
+}
+
+p.hint {
+    color: #888;
+    font-size: 1.1em;
+    margin-top: 10px;
+}

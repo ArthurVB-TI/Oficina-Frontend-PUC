@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dados.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <title>CRUD - Dados</title>
+</head>
+<body>
+
+    <div id="menu">
+        <div>Sistema CRUD</div>
+        <div></div>
+        <p class="menuLinks" onclick="location.href='../index.html'">Criar</p>
+        <p class="menuLinks" onclick="location.href='listas.html'">Listas</p>
+        <p class="menuLinks" onclick="location.href='dados.html'">Dados</p>
+    </div>
+
+    <!-- Modal adicionar/editar item -->
+    <div id="black_bg"></div>
+    <div class="modal" id="itemBox">
+        <h2 id="modal-title">Novo Item</h2>
+        <label>Nome
+            <input type="text" id="input-nome" placeholder="Nome do item">
+        </label>
+        <label>Descrição
+            <textarea id="input-desc" rows="3" placeholder="Descrição..."></textarea>
+        </label>
+        <label>Status
+            <select id="input-status">
+                <option value="pendente">Pendente</option>
+                <option value="andamento">Em andamento</option>
+                <option value="concluido">Concluído</option>
+            </select>
+        </label>
+        <div class="modal-buttons">
+            <div class="cd_button btn-green" onclick="salvarItem()">Salvar</div>
+            <div class="cd_button btn-red" onclick="fecharModal()">Cancelar</div>
+        </div>
+    </div>
+
+    <main>
+        <div id="page-header">
+            <h1 id="lista-titulo">Dados</h1>
+            <div id="btn-novo-item" onclick="abrirModal()">+ Novo Item</div>
+        </div>
+        <p id="select-msg">Selecione uma lista na página <strong>Listas</strong> para ver os dados.</p>
+        <table id="itens-table" style="display:none">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="itens-body"></tbody>
+        </table>
+        <p id="empty-msg" style="display:none">Nenhum item nesta lista ainda.</p>
+    </main>
+
+    <script src="../javascript/dados.js"></script>
+</body>
+</html>

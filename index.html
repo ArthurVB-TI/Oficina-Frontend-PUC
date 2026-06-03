@@ -1,58 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/indexDesign.css">
-
-    <!-- css dos Componentes -->
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/menu.css">
-
-    <title>CRUD</title>
+    <title>CRUD - Criar Lista</title>
 </head>
 <body>
 
-    <!-- Componentes -->
     <div id="menu">
         <div>Sistema CRUD</div>
         <div></div>
-        <p class="menuLinks">Itens</p>
-        <p class="menuLinks">Lista</p>
-        <p class="menuLinks">Dados</p>
+        <p class="menuLinks" onclick="location.href='index.html'">Criar</p>
+        <p class="menuLinks" onclick="location.href='pages/listas.html'">Listas</p>
+        <p class="menuLinks" onclick="location.href='pages/dados.html'">Dados</p>
     </div>
 
-
-    <!-- Page -->
+    <!-- Modal criar lista -->
     <div id="black_bg"></div>
-    <div id="createBox">
-        <form id="cb_name">
-            <p>Digite o nome da sua nova Lista: </p>
-            <input type="text" placeholder="Digite aqui!">
-        </form>
-        <div class="Flex">
-            <div class="cd_button" id="cb_submit">Create</div>
-            <div class="cd_button" id="cb_cancel" onclick="close_listBox()">Cancel</div>
+    <div class="modal" id="createBox">
+        <h2>Nome da nova Lista:</h2>
+        <input type="text" id="input-nome" placeholder="Digite aqui!">
+        <div class="modal-buttons">
+            <div class="cd_button btn-green" id="cb_submit" onclick="criarLista()">Criar</div>
+            <div class="cd_button btn-red" onclick="fecharModal()">Cancelar</div>
         </div>
     </div>
-    <div id="recuperarBox">
-        <div id="undoItems"></div>
-        <div class="Flex">
-            <div class="cd_button" id="rb_submit"></div>
-            <div class="cd_button" id="rb_cancel" onclick="close_recuperar_listBox()">Cancel</div>
-        </div>
-    </div>
-
 
     <main>
-        <div id="newList" onclick="criar_listBox()">
-            Criar nova Lista
-        </div>
-        <div id="undoList" onclick="criar_recuperar_listBox()">
-            Recuperar Lista
-        </div>
-        <div id="itenCreated"></div>
+        <div id="newList" onclick="abrirModal()">+ Criar nova Lista</div>
+        <p class="hint">Clique para criar uma nova lista de tarefas</p>
     </main>
 
-    <script src="javascript/indexScript.js"></script>
+    <script src="javascript/index.js"></script>
 </body>
 </html>

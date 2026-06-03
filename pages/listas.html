@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/listas.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <title>CRUD - Listas</title>
+</head>
+<body>
+
+    <div id="menu">
+        <div>Sistema CRUD</div>
+        <div></div>
+        <p class="menuLinks" onclick="location.href='../index.html'">Criar</p>
+        <p class="menuLinks" onclick="location.href='listas.html'">Listas</p>
+        <p class="menuLinks" onclick="location.href='dados.html'">Dados</p>
+    </div>
+
+    <!-- Modal editar lista -->
+    <div id="black_bg"></div>
+    <div class="modal" id="editBox">
+        <h2>Editar nome da Lista:</h2>
+        <input type="text" id="input-edit-nome" placeholder="Novo nome...">
+        <div class="modal-buttons">
+            <div class="cd_button btn-green" onclick="salvarEdicao()">Salvar</div>
+            <div class="cd_button btn-red" onclick="fecharModal()">Cancelar</div>
+        </div>
+    </div>
+
+    <main>
+        <div id="page-header">
+            <h1>Minhas Listas</h1>
+            <div id="btn-nova-lista" onclick="location.href='../index.html'">+ Nova Lista</div>
+        </div>
+        <div id="listas-grid"></div>
+        <p id="empty-msg" style="display:none">Nenhuma lista criada ainda.</p>
+    </main>
+
+    <script src="../javascript/listas.js"></script>
+</body>
+</html>
